@@ -181,7 +181,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 
 	ui = Instance.new("ScreenGui", Main)
 
-	ui.Name = 'nurysium'
+	ui.Name = 'Brutality'
 	ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
 	local girl_Image = Instance.new("Frame")
