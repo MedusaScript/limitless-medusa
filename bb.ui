@@ -167,7 +167,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	BackgroundShadow.ScaleType = Enum.ScaleType.Slice
 	BackgroundShadow.SliceCenter = Rect.new(85, 85, 427, 427)
 
-	Eye.Name = "rbxassetid://18322439556"
+	Eye.Name = "Eye"
 	Eye.Parent = uiVisible
 	Eye.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Eye.BackgroundTransparency = 1.000
@@ -176,12 +176,12 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	Eye.Position = UDim2.new(0.239999995, 0, 0.239999995, 0)
 	Eye.Size = UDim2.new(0.5, 0, 0.5, 0)
 	Eye.ZIndex = 25
-	Eye.Image = "rbxassetid://18322439556"
+	Eye.Image = "rbxassetid://17615525476"
 	Eye.ImageTransparency = 0.450
 
 	ui = Instance.new("ScreenGui", Main)
 
-	ui.Name = 'Brutality-MedusaScript'
+	ui.Name = 'nurysium'
 	ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
 	local girl_Image = Instance.new("Frame")
@@ -189,7 +189,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	local girl_UIGradient = Instance.new("UIGradient")
 	local girl_UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
-	girl_Image.Name = "rbxassetid://18322439556"
+	girl_Image.Name = "girl_Image"
 	girl_Image.Parent = ui
 	girl_Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	girl_Image.BackgroundTransparency = 1.000
@@ -197,15 +197,15 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	girl_Image.BorderSizePixel = 0
 	girl_Image.Size = UDim2.new(1, 0, 1, 0)
 
-	girl.Name = "rbxassetid://18322439556"
-	girl.Parent = "rbxassetid://18322439556"
+	girl.Name = "girl"
+	girl.Parent = girl_Image
 	girl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	girl.BackgroundTransparency = 1.000
 	girl.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	girl.BorderSizePixel = 0
 	girl.Position = UDim2.new(0.730189502, 0, 0.475565195, 0)
 	girl.Size = UDim2.new(0.269810468, 0, 0.524434745, 0)
-	girl.Image = "rbxassetid://18322439556"
+	girl.Image = "rbxassetid://17663188480"
 
 	girl_UIGradient.Rotation = -74
 	girl_UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 1.00), NumberSequenceKeypoint.new(0.17, 0.80), NumberSequenceKeypoint.new(0.34, 0.47), NumberSequenceKeypoint.new(0.43, 0.00), NumberSequenceKeypoint.new(0.50, 0.00), NumberSequenceKeypoint.new(0.68, 0.00), NumberSequenceKeypoint.new(0.90, 0.97), NumberSequenceKeypoint.new(1.00, 1.00)}
@@ -328,7 +328,7 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	ImageLabel.Position = UDim2.new(0.0675648972, 0, 0.244624332, 0)
 	ImageLabel.Size = UDim2.new(0, 17, 0, 17)
 	ImageLabel.ZIndex = 12
-	ImageLabel.Image = "rbxassetid://18322439556"
+	ImageLabel.Image = "rbxassetid://17441620727"
 	ImageLabel.ImageTransparency = 0.450
 
 	Bar.Name = "Bar"
@@ -399,11 +399,11 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	BackgroundShadow_2.Name = "BackgroundShadow"
 	BackgroundShadow_2.Parent = Background
 	BackgroundShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
-	BackgroundShadow_2.BackgroundTransparency = 0.100
+	BackgroundShadow_2.BackgroundTransparency = 1.000
 	BackgroundShadow_2.Position = UDim2.new(0.499168396, 0, 0.492307693, 2)
 	BackgroundShadow_2.Size = UDim2.new(1.00498962, 142, 1.00923073, 142)
 	BackgroundShadow_2.Image = "rbxassetid://12817494724"
-	BackgroundShadow_2.ImageTransparency = 0.100
+	BackgroundShadow_2.ImageTransparency = 0.500
 	BackgroundShadow_2.ScaleType = Enum.ScaleType.Slice
 	BackgroundShadow_2.SliceCenter = Rect.new(85, 85, 427, 427)
 
