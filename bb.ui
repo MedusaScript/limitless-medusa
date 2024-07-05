@@ -17,8 +17,8 @@ local blur_shader = Instance.new("BlurEffect", workspace.CurrentCamera)
 local is_Mobile = game:GetService("UserInputService").TouchEnabled
 
 if not is_Mobile then
-	blur_shader.Size = 256
-	color_shader.Saturation = -1
+	blur_shader.Size = 0
+	color_shader.Saturation = 0
 end
 
 local function animate_elements(speed: number)
@@ -31,11 +31,11 @@ end
 
 function nurysium: open()
 	tween_service:Create(color_shader, TweenInfo.new(1.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-		Saturation = -1
+		Saturation = 0
 	}):Play()
 
 	tween_service:Create(blur_shader, TweenInfo.new(0.65, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
-		Size = 256
+		Size = 0
 	}):Play()
 
 	task.delay(0.65, function()
@@ -86,7 +86,7 @@ function nurysium: close()
 	tween_service:Create(ui.Background, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {
 		Size = UDim2.new(0, 0, 0, 0),
 		Position = UDim2.new(0.510, 0, 1, 0),
-		BackgroundTransparency = 1
+		BackgroundTransparency = 0
 	}):Play()
 end
 
@@ -159,18 +159,18 @@ function nurysium: init(name: string, is_draggable: boolean, parent)
 	BackgroundShadow.Name = "BackgroundShadow"
 	BackgroundShadow.Parent = uiVisible
 	BackgroundShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-	BackgroundShadow.BackgroundTransparency = 1.000
+	BackgroundShadow.BackgroundTransparency = 0
 	BackgroundShadow.Position = UDim2.new(0.499168396, 0, 0.492307693, 2)
 	BackgroundShadow.Size = UDim2.new(1.00498962, 142, 1.00923073, 142)
 	BackgroundShadow.Image = "rbxassetid://12817494724"
-	BackgroundShadow.ImageTransparency = 0.500
+	BackgroundShadow.ImageTransparency = 0
 	BackgroundShadow.ScaleType = Enum.ScaleType.Slice
 	BackgroundShadow.SliceCenter = Rect.new(85, 85, 427, 427)
 
-	Eye.Name = "Eye"
+	Eye.Name = "rbxassetid://17615525476"
 	Eye.Parent = uiVisible
 	Eye.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Eye.BackgroundTransparency = 1.000
+	Eye.BackgroundTransparency = 0.500
 	Eye.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Eye.BorderSizePixel = 0
 	Eye.Position = UDim2.new(0.239999995, 0, 0.239999995, 0)
