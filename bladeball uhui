@@ -1,6 +1,6 @@
---// nurysium recode
+--// medusa recode
 
-local version = '0.3'
+local version = '1.0'
 
 print('nurysium llc. - https://dsc.gg/nurysium')
 print(version)
