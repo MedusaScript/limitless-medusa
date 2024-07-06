@@ -61,7 +61,7 @@ function initializate(dataFolder_name: string)
 
 	hit_Sound = Instance.new('Sound', nurysium_Data)
 	hit_Sound.SoundId = 'rbxassetid://6607204501'
-	hit_Sound.Volume = 6
+	hit_Sound.Volume = 1
 end
 
 local function get_closest_entity(Object: Part)
@@ -248,8 +248,8 @@ library:create_toggle("Infinite Jump", "Misc", function(toggled)
 end)
 
 library:create_toggle("Discord Invite", "Misc", function(toggle)
-	setclipboard("https://discord.gg/q93X9YuvBD")
-	toclipboard("https://discord.gg/q93X9YuvBD")
+	setclipboard("https://discord.gg/medusascript")
+	toclipboard("https://discord.gg/medusascript")
 end)
 
 --// kill effect
