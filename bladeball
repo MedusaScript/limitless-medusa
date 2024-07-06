@@ -1,10 +1,10 @@
---// nurysium recode
+--// medusa recode
 
-local version = '1.0'
+local version = '0.3'
 
-print('medusa llc. - https://discord.gg/medusascript')
+print('nurysium llc. - https://dsc.gg/nurysium')
 print(version)
-print('none')
+print('ahem security bypassed')
 
 game:GetService("ReplicatedStorage").Security.RemoteEvent:Destroy()
 game:GetService("ReplicatedStorage").Security[""]:Destroy()
@@ -28,27 +28,27 @@ local hit_Sound = nil
 local closest_Entity = nil
 local parry_remote = nil
 
-getgenv().aura_Enabled = true
-getgenv().hit_sound_Enabled = true
-getgenv().hit_effect_Enabled = true
-getgenv().night_mode_Enabled = true
-getgenv().trail_Enabled = true
-getgenv().self_effect_Enabled = true
-getgenv().kill_effect_Enabled = true
-getgenv().shaders_effect_Enabled = true
-getgenv().ai_Enabled = true
-getgenv().spectate_Enabled = true
+getgenv().aura_Enabled = false
+getgenv().hit_sound_Enabled = false
+getgenv().hit_effect_Enabled = false
+getgenv().night_mode_Enabled = false
+getgenv().trail_Enabled = false
+getgenv().self_effect_Enabled = false
+getgenv().kill_effect_Enabled = false
+getgenv().shaders_effect_Enabled = false
+getgenv().ai_Enabled = false
+getgenv().spectate_Enabled = false
 
 local Services = {
 	game:GetService('AdService'),
 	game:GetService('SocialService')
 }
 
-local library = loadstring(game:HttpGet(""))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/flezzpe/Nurysium/main/nurysium_ui.lua"))()
 task.wait(0.25)
 
 --// Yes, you can rename, I don't mind 🌠
-library:init("Brutality " ..version, game:GetService("UserInputService").TouchEnabled, game:GetService("CoreGui"))
+library:init("Nurysium " ..version, game:GetService("UserInputService").TouchEnabled, game:GetService("CoreGui"))
 
 library:create_section("Combat", 17440545793)
 library:create_section("World", 17440865331)
@@ -61,7 +61,7 @@ function initializate(dataFolder_name: string)
 
 	hit_Sound = Instance.new('Sound', nurysium_Data)
 	hit_Sound.SoundId = 'rbxassetid://6607204501'
-	hit_Sound.Volume = 0.1
+	hit_Sound.Volume = 6
 end
 
 local function get_closest_entity(Object: Part)
@@ -165,11 +165,11 @@ library:create_toggle("FPS Unlocker", "Misc", function(toggled)
 end)
 
 local originalMaterials = {}
-local fpsBoosterEnabled = true
+local fpsBoosterEnabled = false
 library:create_toggle("Universal FPS Boost - Beta", "Misc", function(toggled)
     fpsBoosterEnabled = toggled
     if toggled then
-        game.Lighting.GlobalShadows = true
+        game.Lighting.GlobalShadows = false
         setfpscap(9e9)
         task.spawn(function()
             while fpsBoosterEnabled do
@@ -205,7 +205,7 @@ library:create_toggle("Universal FPS Boost - Beta", "Misc", function(toggled)
                     local batch = {unpack(lightingDescendants, i, math.min(i + batchSize - 1, #lightingDescendants))}
                     for _, effect in ipairs(batch) do
                         if effect:IsA("BlurEffect") or effect:IsA("SunRaysEffect") or effect:IsA("ColorCorrectionEffect") or effect:IsA("BloomEffect") or effect:IsA("DepthOfFieldEffect") then
-                            effect.Enabled = ture
+                            effect.Enabled = false
                         end
                     end
                     task.wait(0.1) -- Yield to prevent lag spike
@@ -248,8 +248,8 @@ library:create_toggle("Infinite Jump", "Misc", function(toggled)
 end)
 
 library:create_toggle("Discord Invite", "Misc", function(toggle)
-	setclipboard("https://discord.gg/medusascript")
-	toclipboard("https://discord.gg/medusascript")
+	setclipboard("https://discord.gg/q93X9YuvBD")
+	toclipboard("https://discord.gg/q93X9YuvBD")
 end)
 
 --// kill effect
@@ -258,7 +258,7 @@ function play_kill_effect(Part)
 	task.defer(function()
 		local bell = game:GetObjects("rbxassetid://17519762269")[1]
 
-		bell.Name = 'none'
+		bell.Name = 'Yeat_BELL'
 		bell.Parent = workspace
 
 		bell.Position = Part.Position - Vector3.new(0, 20, 0)
@@ -434,14 +434,14 @@ task.defer(function()
             game:GetService("Lighting").BlurEffect.Enabled = true
         else
             local lighting = game:GetService("Lighting")
-            lighting.GlobalShadows = true
+            lighting.GlobalShadows = false
             lighting.Ambient = Color3.fromRGB(255, 255, 255)
             lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
-            lighting.Bloom.Enabled = true
-            lighting.ColorCorrection.Enabled = true
-            lighting.DepthOfField.Enabled = true
-            lighting.SunRaysEffect.Enabled = true
-            lighting.Atmosphere.Enabled = true
+            lighting.Bloom.Enabled = false
+            lighting.ColorCorrection.Enabled = false
+            lighting.DepthOfField.Enabled = false
+            lighting.SunRaysEffect.Enabled = false
+            lighting.Atmosphere.Enabled = false
             lighting.BlurEffect.Enabled = false
         end
     end
@@ -469,15 +469,15 @@ end)
 
 local aura = {
 	can_parry = true,
-	is_spamming = true,
+	is_spamming = false,
 
-	parry_Range = 1,
-	spam_Range = 1,  
-	hit_Count = 1,
+	parry_Range = 0,
+	spam_Range = 0,  
+	hit_Count = 0,
 
 	hit_Time = tick(),
 	ball_Warping = tick(),
-	is_ball_Warping = true,
+	is_ball_Warping = false,
 	last_target = nil
 }
 
@@ -547,7 +547,7 @@ end)
 ReplicatedStorage.Remotes.ParrySuccessAll.OnClientEvent:Connect(function()
     aura.hit_Count = aura.hit_Count + 1
 
-    task.delay(0.001, function()
+    task.delay(0.005, function()
         aura.hit_Count = aura.hit_Count - 1
     end)
 end)
@@ -599,7 +599,7 @@ task.spawn(function()
                     CFrame.new(camera.CFrame.Position, preciseHitPosition),
                     {[closest_Entity.Name] = preciseHitPosition},
                     {preciseHitPosition.X, preciseHitPosition.Y},
-                    true
+                    false
                 )
             end)
         end
@@ -611,8 +611,8 @@ RunService.PreRender:Connect(function()
 
     workspace:WaitForChild("Balls").ChildRemoved:Once(function(child)
         aura.hit_Count = 0
-        aura.is_ball_Warping = true
-        aura.is_spamming = true
+        aura.is_ball_Warping = false
+        aura.is_spamming = false
         aura.can_parry = true
         aura.last_target = nil
     end)
@@ -673,12 +673,12 @@ RunService.PreRender:Connect(function()
 
     task.spawn(function()
         if (tick() - aura.ball_Warping) >= 0.15 + (target_Distance / 10000) - (ball_Speed / 1000) or ball_Distance < 10 then
-            aura.is_ball_Warping = true
+            aura.is_ball_Warping = false
             return
         end
 
         if (ball_Position - aura.last_target.HumanoidRootPart.Position).Magnitude > 35.5 or target_Distance <= 12 then
-            aura.is_ball_Warping = true
+            aura.is_ball_Warping = false
             return
         end
 
@@ -698,11 +698,11 @@ RunService.PreRender:Connect(function()
                 CFrame.new(camera.CFrame.Position, preciseTargetPosition),
                 {[closest_Entity.Name] = preciseTargetPosition},
                 {preciseTargetPosition.X, preciseTargetPosition.Y},
-                true
+                false
             )
         end)
 
-        aura.can_parry = true
+        aura.can_parry = false
         aura.hit_Time = tick()
         aura.hit_Count = aura.hit_Count + 1
 
