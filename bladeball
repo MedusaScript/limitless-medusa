@@ -2,7 +2,7 @@
 
 local version = '0.3'
 
-print('nurysium llc. - https://dsc.gg/nurysium')
+print('nurysium llc. - https://discord.gg/medusascript')
 print(version)
 print('ahem security bypassed')
 
