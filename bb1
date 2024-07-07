@@ -45,7 +45,7 @@ local function startAutoParry()
     local parryButtonPress = replicatedStorage.Remotes.ParryButtonPress
     local abilityButtonPress = replicatedStorage.Remotes.AbilityButtonPress
 
-    print("Script successfully ran.")
+    print("Script successfully run.")
 
     local function onCharacterAdded(newCharacter)
         character = newCharacter
@@ -63,7 +63,7 @@ local function startAutoParry()
 local function chooseNewFocusedBall()
     local balls = ballsFolder:GetChildren()
     for _, ball in ipairs(balls) do
-        if ball:GetAttribute("realBall") ~= nil and ball:GetAttribute("realBall") == true then
+        if ball:GetAttribute("Ball") ~= nil and ball:GetAttribute("Ball") == true then
             focusedBall = ball
             print(focusedBall.Name)
             break
@@ -236,7 +236,7 @@ end
 })
 
 local toplegitspawntp = AutoParry:CreateToggle({
-    Name = "Most Legit Spawn tp1!1!1!!!!!1!!1!!!!!!!",
+    Name = "Most Legit Spawn",
     CurrentValue = false,
     Flag = "StaySpawnFlag",
     Callback = function(Value)
