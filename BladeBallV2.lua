@@ -59,3 +59,88 @@ local function makeDraggable(frame)
         if input.UserInputType == Enum.UserInputType.MouseButton1 then
             dragToggle = false
         end
+end)
+
+    UIS.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement and dragToggle then
+            updateInput(input)
+        end
+    end)
+end
+
+-- Membuat Tab Utama dan Bagian Skrip
+local mainTab = window:NewTab("Main")
+local mainSection = mainTab:NewSection("Auto Parry")
+
+-- Menambahkan Tombol "Mulai" pada UI
+mainSection:NewButton("Mulai Auto Parry", "Aktifkan Auto Parry", function()
+    startParry()
+end)
+
+-- Menambahkan Tombol "Berhenti" pada UI
+mainSection:NewButton("Berhenti Auto Parry", "Nonaktifkan Auto Parry", function()
+    stopParry()
+end)
+
+-- Menambahkan Tombol "Tutup Jendela UI" pada UI
+mainSection:NewButton("Tutup Jendela UI", "Sembunyikan Jendela User Interface", function()
+    toggleWindow()
+end)
+
+-- Menambahkan Tombol "Hapus Skrip" pada UI
+mainSection:NewButton("Hapus Skrip", "Menghapus Skrip dari Memori", function()
+    stopParry()
+    window:Destroy()
+    print("Skrip Dihapus")
+end)
+
+-- Tambahkan fungsi draggable ke window
+makeDraggable(window)
+
+-- Menambahkan Notifikasi untuk Bergabung dengan Discord
+print("Bergabunglah dengan komunitas kami di Discord: https://discord.gg/medusascript")
+
+-- Perlindungan tambahan
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local protect = {} -- Membuat tabel kosong untuk perlindungan
+protect.__index = protect -- Mengatur metatable untuk tabel perlindungan
+
+-- Fungsi untuk memeriksa lingkungan dan skrip ilegal
+function protect:checkEnvironment()
+    if getgenv then
+        setfenv(1, protect)
+    else
+        error("Lingkungan tidak didukung!")
+    end
+end
+
+-- Menjalankan perlindungan lingkungan
+protect:checkEnvironment()
+
+-- Menambahkan Fungsi anti-detection
+local function antiDetection()
+    local mt = getrawmetatable(game)
+    local oldNamecall = mt.__namecall
+
+    setreadonly(mt, false)
+
+    mt.__namecall = newcclosure(function(self, ...)
+        local args = {...}
+        local method = getnamecallmethod()
+
+        if method == "Kick" then
+[]
+            return nil
+        end
+
+        return oldNamecall(self, unpack(args))
+    end)
+
+    setreadonly(mt, true)
+end
+
+-- Mengaktifkan perlindungan anti-detection
+antiDetection()
