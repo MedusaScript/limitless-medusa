@@ -19,15 +19,15 @@ end
 localPlayer.CharacterAdded:Connect(onCharacterAdded)
 
 local TruValue = Instance.new("StringValue")
-if workspace:FindFirstChild("AbilityThingyk1212") then
-    workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+if workspace:FindFirstChild("Ability") then
+    workspace:FindFirstChild("Ability"):Remove()
     task.wait(0.1)
     TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Dash" --Change to Use other ability
     else
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Dash" --Change to Use other ability
 end
 
@@ -441,9 +441,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
 
     local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Dash" --Change to Use other ability
 
 end
@@ -462,7 +462,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -490,9 +490,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Forcefield" --Change to Use other ability
 end
 
@@ -510,7 +510,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -538,9 +538,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Invisibility" --Change to Use other ability
 end
 
@@ -558,7 +558,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -586,9 +586,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Platform" --Change to Use other ability
 end
 
@@ -606,7 +606,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -634,9 +634,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Raging Deflection" --Change to Use other ability
 end
 
@@ -654,7 +654,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -682,9 +682,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Shadow Step" --Change to Use other ability
 end
 
@@ -702,7 +702,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -730,9 +730,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "AbilityThingy"
         TruValue.Value = "Super Jump" --Change to Use other ability
 end
 
@@ -750,7 +750,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -778,9 +778,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Telekinesis" --Change to Use other ability
 end
 
@@ -798,7 +798,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -826,9 +826,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Thunder Dash" --Change to Use other ability
 end
 
@@ -846,7 +846,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
@@ -874,9 +874,9 @@ game:GetService("ReplicatedStorage").Remotes.kebaind:FireServer()
             
 local function AbilityValue2()
 local TruValue = Instance.new("StringValue")
-workspace:FindFirstChild("AbilityThingyk1212"):Remove()
+workspace:FindFirstChild("Ability"):Remove()
         TruValue.Parent = game:GetService("Workspace")
-        TruValue.Name = "AbilityThingyk1212"
+        TruValue.Name = "Ability"
         TruValue.Value = "Rapture" --Change to Use other ability
 end
 
@@ -894,7 +894,7 @@ for i,b in pairs(abilitiesFolder:GetChildren()) do
     end)
 
     task.wait(0.05)
-        local AbilityValue = workspace.AbilityThingyk1212
+        local AbilityValue = workspace.Ability
         if b.Name == AbilityValue.Value then
 
             v.Enabled = false
