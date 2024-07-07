@@ -10,62 +10,27 @@ local isWindowVisible = true
 
 -- Fungsi untuk Memulai Auto Parry
 local function startParry()
-    isParrying = true
-    -- Masukkan logika parry otomatis di sini
-    while isParrying do
-        -- Logika Parry Otomatis
-        print("Parry terjadi!")
-        wait(0.1) -- Set interval untuk parry
-    end
+isParrying = true
+-- Masukkan logika parry otomatis di sini
+print("Auto Parry Dimulai")
 end
 
 -- Fungsi untuk Menghentikan Auto Parry
 local function stopParry()
-    isParrying = false
-    -- Berhentikan logika parry otomatis di sini
-    print("Auto Parry Dihentikan")
+isParrying = false
+-- Berhentikan logika parry otomatis di sini
+print("Auto Parry Dihentikan")
 end
 
 -- Fungsi untuk Menampilkan atau Menyembunyikan Jendela UI
 local function toggleWindow()
-    isWindowVisible = not isWindowVisible
-    window:Toggle(isWindowVisible)
-    if isWindowVisible then
-        print("Jendela UI Dibuka")
-    else
-        print("Jendela UI Ditutup")
-    end
+isWindowVisible = not isWindowVisible
+window:Toggle(isWindowVisible)
+if isWindowVisible then
+print("Jendela UI Dibuka")
+else
+print("Jendela UI Ditutup")
 end
-
--- Fungsi untuk membuat UI draggable
-local function makeDraggable(frame)
-    local UIS = game:GetService("UserInputService")
-    local dragToggle, dragStart, startPos
-
-    local function updateInput(input)
-        local delta = input.Position - dragStart
-        frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-    end
-
-    frame.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragToggle = true
-            dragStart = input.Position
-            startPos = frame.Position
-        end
-    end)
-
-    frame.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragToggle = false
-        end
-end)
-
-    UIS.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement and dragToggle then
-            updateInput(input)
-        end
-    end)
 end
 
 -- Membuat Tab Utama dan Bagian Skrip
@@ -74,28 +39,26 @@ local mainSection = mainTab:NewSection("Auto Parry")
 
 -- Menambahkan Tombol "Mulai" pada UI
 mainSection:NewButton("Mulai Auto Parry", "Aktifkan Auto Parry", function()
-    startParry()
+startParry()
 end)
 
 -- Menambahkan Tombol "Berhenti" pada UI
 mainSection:NewButton("Berhenti Auto Parry", "Nonaktifkan Auto Parry", function()
-    stopParry()
+stopParry()
 end)
 
 -- Menambahkan Tombol "Tutup Jendela UI" pada UI
 mainSection:NewButton("Tutup Jendela UI", "Sembunyikan Jendela User Interface", function()
-    toggleWindow()
+toggleWindow()
 end)
 
 -- Menambahkan Tombol "Hapus Skrip" pada UI
 mainSection:NewButton("Hapus Skrip", "Menghapus Skrip dari Memori", function()
-    stopParry()
-    window:Destroy()
-    print("Skrip Dihapus")
+-- Hapus semua event dan callback
+stopParry()
+window:Destroy()
+print("Skrip Dihapus")
 end)
-
--- Tambahkan fungsi draggable ke window
-makeDraggable(window)
 
 -- Menambahkan Notifikasi untuk Bergabung dengan Discord
 print("Bergabunglah dengan komunitas kami di Discord: https://discord.gg/medusascript")
@@ -120,7 +83,7 @@ end
 -- Menjalankan perlindungan lingkungan
 protect:checkEnvironment()
 
--- Menambahkan Fungsi anti-detection
+-- Menambahkan fungis anti-detection
 local function antiDetection()
     local mt = getrawmetatable(game)
     local oldNamecall = mt.__namecall
@@ -132,7 +95,6 @@ local function antiDetection()
         local method = getnamecallmethod()
 
         if method == "Kick" then
-[]
             return nil
         end
 
