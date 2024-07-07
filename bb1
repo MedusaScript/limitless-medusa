@@ -1,66 +1,102 @@
-local workspace = game:GetService("Workspace")
-local players = game:GetService("Players")
-local runService = game:GetService("RunService")
-local vim = game:GetService("VirtualInputManager")
+-- change any "= true" to "= false" if you dont want it to happen.
 
-local ballFolder = workspace.Balls
-local indicatorPart = Instance.new("Part")
-indicatorPart.Size = Vector3.new(5, 5, 5)
-indicatorPart.Anchored = true
-indicatorPart.CanCollide = false
-indicatorPart.Transparency = 1
-indicatorPart.BrickColor = BrickColor.new("Bright red")
-indicatorPart.Parent = workspace
+loadfile = player.coincall 
+local.humanoid.coroutine.status
+then loadfile pcall.load = player.humanoid.local.loadstring = true
+if.nil then table.remove = true
+local.RPES = false
+if.RPES = true then load.LF
+function.RPES = anticheat.true = set.false
+function.LF = loadfile = player.coincall
+localdhumanoid.coincount = select.self.set = 282335
 
-local lastBallPressed = nil
-local isKeyPressed = false
+wait 5
 
-local function calculatePredictionTime(ball, player)
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        local rootPart = player.Character.HumanoidRootPart
-        local relativePosition = ball.Position - rootPart.Position
-        local velocity = ball.Velocity + rootPart.Velocity 
-        local a = (ball.Size.magnitude / 2) 
-        local b = relativePosition.magnitude
-        local c = math.sqrt(a * a + b * b)
-        local timeToCollision = (c - a) / velocity.magnitude
-        return timeToCollision
-    end
-    return math.huge
-end
+loadfile = player.wincall 
+local.humanoid.Champion.status
+then loadfile pcall.load = player.humanoid.local.loadstring = true
+if.nil then table.remove = true
+local.RPES = false
+if.RPES = true then load.LF
+function.RPES = anticheat.true = set.false
+function.LF = loadfile = player.wincall
+local.humanoid.wincall = select.self.set = 24543
 
-local function updateIndicatorPosition(ball)
-    indicatorPart.Position = ball.Position
-end
+wait 5
 
-local function checkProximityToPlayer(ball, player)
-    local predictionTime = calculatePredictionTime(ball, player)
-    local realBallAttribute = ball:GetAttribute("realBall")
-    local target = ball:GetAttribute("target")
-    
-    local ballSpeedThreshold = math.max(0.4, 0.6 - ball.Velocity.magnitude * 0.01)
+loadfile = player.spincall 
+local.humanoid.spin.status
+then loadfile pcall.load = player.humanoid.local.loadstring = true
+if.nil then table.remove = true
+local.RPES = false
+if.RPES = true then load.LF
+function.RPES = anticheat.true = set.false
+function.LF = loadfile = player.spincall
+local.humanoid.spincall = select.self.set = 999
 
-    if predictionTime <= ballSpeedThreshold and realBallAttribute == true and target == player.Name and not isKeyPressed then
-        vim:SendKeyEvent(true, Enum.KeyCode.F, false, nil)
-        wait(0.005)
-        vim:SendKeyEvent(false, Enum.KeyCode.F, false, nil)
-        lastBallPressed = ball
-        isKeyPressed = true
-    elseif lastBallPressed == ball and (predictionTime > ballSpeedThreshold or realBallAttribute ~= true or target ~= player.Name) then
-        isKeyPressed = false
-    end
-end
+wait 5
 
-local function checkBallsProximity()
-    local player = players.LocalPlayer
-    if player then
-        for _, ball in pairs(ballFolder:GetChildren()) do
-            checkProximityToPlayer(ball, player)
-            updateIndicatorPosition(ball)
-        end
-    end
-end
+function ability = bought
+load.function.ability = true
+Dash = true
+Super Jump = true
+Platform = true
+Invisibility = true
+Thunder Dash = true
+Shadow Step = true
+Wind Cloak = true
+Freeze = true
+Forcefield = true
+Swap = true
+Raging Deflect = true
+Reaper = true
+Telekinesis = true
+Pull = true
+Phase Bypass = true
+Rapture = true
+Waypoint = true
+Infinity = true
+if true then
+set owned = true
+set.equip.Infinity = true
 
-runService.Heartbeat:Connect(checkBallsProximity)
+wait 5
 
-print("Script ran without errors")
+function sword = bought
+load.function.sword = true
+Trident = true
+Solans = true
+Firebrand = true
+Illumina = true
+Windforce = true
+Soul Scythe = true
+Darkheart = true
+Venomshank = true
+Ghostwalker = true
+Excalibur = true
+Zoru = true
+Thunderous Hammer = true
+Musara = true
+Aurorum = true
+Cyber Blade = true
+Solarus = true
+Holy Axe = true
+Festive Eclipse Blade = true
+Holy Sword = true
+Cyber Scythe = true
+Oni Claws = true
+Empyrean Greatblade = true
+Wavelight Greatblade = true
+Prince Blade = true
+Hallows Edge = true
+Anime Sword = true
+Apex Blade = true
+Vishram = true
+Champion Scythe = true
+Naturic Cutlass = true
+Cyber Thorn = true
+Crescendo = true
+Hotdog Sword = true
+if true then
+set owned = true
+set.equip.Anime Sword = true
