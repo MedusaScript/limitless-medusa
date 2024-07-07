@@ -1,3 +1,6 @@
+-- Skid = Mati Nya Ga Di Terima Sama Maha Kuasa
+local SlayerzUI_MobileToggle = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/SlayerzUI/main/MBToggle.script"))()
+SlayerzUI_MobileToggle:Create("rbxassetid://16058297648") -- Inget Tuh Tai
 -- Pastikan UI Library diinstal dengan baik, contoh menggunakan library Roblox
 local uiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
