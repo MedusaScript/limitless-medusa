@@ -31,7 +31,7 @@ if workspace:FindFirstChild("AbilityThingyk1212") then
         TruValue.Value = "Dash" --Change to Use other ability
 end
 
-local AutoParry = Window:CreateTab("Auto Parry", 13014537525)
+local AutoParry = Window:CreateTab("Auto Parry", 13014546637)
 local Main = Window:CreateTab("Main", 13014546637)
 local Misc = Window:CreateTab("Misc", 13014546637)
 local AutoOpen = Window:CreateTab("Auto Open", 13014546637)
