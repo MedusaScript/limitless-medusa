@@ -163,9 +163,9 @@ local expfunctions = {
     readfile
 }
 
---[[if game:GetService("CoreGui"):FindFirstChild("BRUTALITY HUB UI") then
-	game:GetService("CoreGui")["BRUTALITY HUB HUB UI"]:Destroy()
-	ContextActionService:UnbindAction("BRUTALITY HUB Menu")
+--[[if game:GetService("CoreGui"):FindFirstChild("VIP TURTLE HUB UI") then
+	game:GetService("CoreGui")["VIP TURTLE HUB UI"]:Destroy()
+	ContextActionService:UnbindAction("Turtle Menu")
 end]]
 
 function lib.randomString()
@@ -184,20 +184,20 @@ function lib.Interface(str)
 			local Main = Instance.new("ScreenGui")
 			Main.Name = lib.randomString()
 			Main.Parent = hiddenUI()
-			Notif:NotifyUser(`<b>BRUTALITY HUB running in {identifyexecutor()} Environment</b>`,10)
+			Notif:NotifyUser(`<b>Brutality Hub running in {identifyexecutor()} Environment</b>`,10)
 			return Main
 		elseif (not is_sirhurt_closure) and (syn and syn.protect_gui) then
 			local Main = Instance.new("ScreenGui")
 			Main.Name = lib.randomString()
 			syn.protect_gui(Main)
 			Main.Parent = game:GetService("CoreGui")
-			Notif:NotifyUser("<b>BRUTALITY HUB running in Synapse X Environment</b>",10)
+			Notif:NotifyUser("<b>Brutality Hub running in Synapse X Environment</b>",10)
 			return Main
 		elseif game:GetService("CoreGui"):FindFirstChild('RobloxGui') then
 			local Main = Instance.new("ScreenGui")
 			Main.Name = lib.randomString()
 			Main.Parent = game:GetService("CoreGui")["RobloxGui"]
-			Notif:NotifyUser("<b>BRUTALITY HUB running in Roblox Client</b>",10)
+			Notif:NotifyUser("<b>Brutality Hub running in Roblox Client</b>",10)
 			return Main
 		else
 			local Main = Instance.new("ScreenGui")
@@ -215,13 +215,13 @@ function lib.Interface(str)
 	end
 end
 
-if lib.Interface("log").Name == "BRUTALITY HUB HUB UI" then
+if lib.Interface("log").Name == "VIP TURTLE HUB UI" then
 	lib.Interface("log"):Destroy()
-	ContextActionService:UnbindAction("BRUTALITY HUB Menu")
+	ContextActionService:UnbindAction("Turtle Menu")
 end
 
 local ui = Instance.new("ScreenGui")
-ui.Name = "BRUTALITY HUB UI"
+ui.Name = "VIP TURTLE HUB UI"
 ui.Parent = lib.Interface("hide")
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -239,7 +239,7 @@ local UICorner_3s = Instance.new("UICorner")
 ScreenGuisForTH.Parent = ui
 ScreenGuisForTH.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGuisForTH.Enabled = false
-ScreenGuisForTH.Name = "BRUTALITY HUB UI Notify"
+ScreenGuisForTH.Name = "Turtle UI Notify"
 
 THNFrame.Parent = ScreenGuisForTH
 THNFrame.BackgroundColor3 = Color3.fromRGB(19, 24, 52)
@@ -884,12 +884,12 @@ function lib:LoadRepository(path,bool)
 		local loadFunction = loadstring(async.Body)
 		if loadFunction then
 			if gui == true then
-				lib:notify(lib:ColorFonts("[ BRUTALITYHUB-Client ] Injecting a UI...","Bold,Green"),5)
+				lib:notify(lib:ColorFonts("[ Turtle-Client ] Injecting a UI...","Bold,Green"),5)
 				return loadFunction()
 			elseif gui == false then
-				lib:notify(lib:ColorFonts("[ BRUTALITYHUB-Client ] Injecting a script...","Bold,Green"),5)
+				lib:notify(lib:ColorFonts("[ Turtle-Client ] Injecting a script...","Bold,Green"),5)
 				loadFunction()
-				lib:notify(lib:ColorFonts("[ BRUTALITYHUB-Client ] Done injecting...","Bold,Green"),5)
+				lib:notify(lib:ColorFonts("[ Turtle-Client ] Done injecting...","Bold,Green"),5)
 			end
 		else
 			lib:notify(lib:ColorFonts("Failed to load script, HTTP Error Code : " .. lib:ColorFonts(async.StatusCode,"Underline"),"Bold,Red"),9e9)
@@ -979,7 +979,7 @@ function lib.createESP(instance,po)
 	if typeof(instance) == "Instance" then 
 		if type(po) == "table" then
 			local esp = Instance.new("Highlight")
-			esp.Name = "BRUTALITY HUB XRAY"
+			esp.Name = "TURTLE XRAY"
 			esp.FillColor = po.fill
 			esp.OutlineColor = po.outline
 			esp.FillTransparency = 0
@@ -997,7 +997,7 @@ end --lib.createESP(v,{fill = Color3.new(0,1,0),outline = Color3.new(1,1,1)})
 
 function lib.revokeESP()
 	lib:descendant(workspace,function(v)
-		if v:IsA("Highlight") and v.Name == "BRUTALITY HUB XRAY" then
+		if v:IsA("Highlight") and v.Name == "TURTLE XRAY" then
 			v:Destroy()
 		end
 	end)
@@ -1254,7 +1254,7 @@ local Old; Old = hookfunction(getrenv().debug.info, newcclosure(function(...)
 
     if Detected and LevelOrFunc == Detected then
         if DEBUG then
-            lib:notify("BRUTALITY HUB",10)
+            lib:notify("Turtle Script Patcher V10 | adonis bypassed",10)
         end
 
         return coroutine.yield(coroutine.running())
@@ -2227,7 +2227,7 @@ function lib:ErrorReader(func,ssd)
 	if not shit and shut == false then
 		lib:notify(lib:ColorFonts(dick:gsub(":" .. dick:sub(2,5) .. ":","🔧 |"):gsub(":" .. dick:sub(2,4) .. ":","🔧 |"):gsub(":" .. dick:sub(2,3) .. ":","🔧 |"):gsub(":" .. dick:sub(2,2) .. ":","🔧 |"),"Bold,Red"),9e9)
 		--lib:notify(lib:ColorFonts(lib:ColorFonts("A fatal error occured at connection '" .. lib:ColorFonts("Turtle_Backend_Service","Underline") .. "'. sent or screenshot this error to the developer","Bold"),"Red"),9e9)
-		SendMessage("https://discord.com/api/webhooks/1238814420730249256/5HrILgPs4i6KejfyN5auAH19cW4cxoQQl3PPVmRfbWr8pkM9DCFLvFeJZjS5TK4aMyKT","An error has occured when running Turtle Hub.```diff\n- " .. dick .. "\n" .. debug.traceback() .. "\n```")
+		SendMessage("https://discord.com/api/webhooks/1238814420730249256/5HrILgPs4i6KejfyN5auAH19cW4cxoQQl3PPVmRfbWr8pkM9DCFLvFeJZjS5TK4aMyKT","An error has occured when running Brutality Hub.```diff\n- " .. dick .. "\n" .. debug.traceback() .. "\n```")
 	end
 end
 
@@ -5256,5 +5256,5 @@ TextChatService.OnIncomingMessage = function(textChatMessage: TextChatMessage)
 end
 ]]
 
-print("Medusa UI is running")
+print("Brutality UI is running")
 return lib
